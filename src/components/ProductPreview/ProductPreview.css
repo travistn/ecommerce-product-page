@@ -1,0 +1,27 @@
+.productPreview__container {
+  width: 80%;
+  margin-left: 10rem;
+}
+
+.productPreview-image img {
+  width: 500px;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+}
+
+.productPreview-thumbnails {
+  display: flex;
+  flex-direction: row;
+}
+
+.productPreview-thumbnails img {
+  width: 100px;
+  border-radius: 14px;
+  margin-right: 2rem;
+}
+
+.productPreview-thumbnails img:hover {
+  cursor: pointer;
+  opacity: 70%;
+  border: 2px solid var(--color-orange);
+}
