@@ -4,4 +4,6 @@
   --color-light_grayish_blue: hsl(220, 14%, 75%);
   --color-white: hsl(0, 0%, 100%);
   --color-black: hsl(0, 0%, 0%);
+  --color-orange: hsl(26, 100%, 55%);
+  --color-pale_orange: hsl(25, 100%, 94%);
 }
