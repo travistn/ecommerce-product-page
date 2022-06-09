@@ -1,6 +1,7 @@
 .productPreview__container {
   width: 80%;
-  margin-left: 10rem;
+  margin-left: 14rem;
+  position: relative;
 }
 
 .productPreview-image img {
@@ -29,4 +30,8 @@
 .active-thumbnail {
   opacity: 70%;
   border: 2px solid var(--color-orange);
+}
+
+.productPreview-modal {
+  z-index: 1000;
 }
