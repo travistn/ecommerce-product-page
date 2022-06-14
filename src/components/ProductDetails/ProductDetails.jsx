@@ -1,6 +1,27 @@
+import { useEffect } from 'react';
+
+import { BsCart3 } from 'react-icons/bs';
+import { HiPlus, HiMinus } from 'react-icons/hi';
+
 import './ProductDetails.css';
 
-const ProductDetails = () => {
+const ProductDetails = ({ quantity, setQuantity, setCartAmount }) => {
+  const checkoutQuantityIncrease = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  };
+
+  const checkoutQuantityDecrease = () => {
+    setQuantity((prevQuantity) => prevQuantity - 1);
+  };
+
+  const addToCart = () => {
+    setCartAmount(quantity * 125);
+  };
+
+  useEffect(() => {
+    addToCart();
+  }, [quantity]);
+
   return (
     <div className='productDetails__container'>
       <div className='productDetails'>
@@ -12,10 +33,20 @@ const ProductDetails = () => {
         </p>
         <div className='productDetails-price'>
           <div className='productDetails-price-top'>
-            <p>$125.00</p>
+            <p>{`$${125}.00`}</p>
             <p>50%</p>
           </div>
           <p className='productDetails-price-original'>$250.00</p>
+        </div>
+        <div className='productDetails-checkout'>
+          <div className='productDetails-checkout-quantity'>
+            <HiMinus className='checkout-minus' onClick={checkoutQuantityDecrease} />
+            {quantity}
+            <HiPlus className='checkout-plus' onClick={checkoutQuantityIncrease} />
+          </div>
+          <button onClick={addToCart}>
+            <BsCart3 /> Add to cart
+          </button>
         </div>
       </div>
     </div>
