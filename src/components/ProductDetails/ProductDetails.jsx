@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 
 import { BsCart3 } from 'react-icons/bs';
 import { HiPlus, HiMinus } from 'react-icons/hi';
@@ -14,13 +14,13 @@ const ProductDetails = ({ quantity, setQuantity, setCartAmount }) => {
     setQuantity((prevQuantity) => prevQuantity - 1);
   };
 
-  const addToCart = () => {
+  const addToCart = useCallback(() => {
     setCartAmount(quantity * 125);
-  };
+  }, [quantity, setCartAmount]);
 
   useEffect(() => {
     addToCart();
-  }, [quantity]);
+  }, [quantity, addToCart]);
 
   return (
     <div className='productDetails__container'>
