@@ -81,7 +81,8 @@ const ProductPreview = () => {
             productImages={productImages}
             clickHandler={clickHandler}
             active={active}
-            closeModal={setOpenModal}
+            openModal={openModal}
+            setOpenModal={setOpenModal}
             leftClick={prevImage}
             rightClick={nextImage}
             current={current}

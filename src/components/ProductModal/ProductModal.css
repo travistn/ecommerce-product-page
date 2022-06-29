@@ -1,9 +1,15 @@
 .productModal__container {
   position: absolute;
-  left: 40%;
-  top: -17%;
+  left: 650px;
+  top: 90px;
   display: flex;
   flex-direction: column;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .productModal-image img {
